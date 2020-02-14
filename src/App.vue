@@ -58,6 +58,13 @@ body {
     & > a {
       color: inherit;
       text-decoration: none;
+
+      transition-duration: 0.5s;
+
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -77,6 +84,13 @@ body {
       & > a {
         color: inherit;
         text-decoration: none;
+
+        transition-duration: 0.2s;
+
+        &:hover {
+          color: white;
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -84,9 +98,6 @@ body {
 
 .main {
   grid-row: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .footer {
