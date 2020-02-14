@@ -2,12 +2,15 @@
   <div id="app" class="app">
     <header class="header">
       <div class="site-title">
-        <h1>komputeryk.pl</h1>
+        <h1><router-link to="/">komputeryk.pl</router-link></h1>
       </div>
       <nav class="nav">
         <ol>
-          <li><router-link to="/">Home</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/">Strona główna</router-link></li>
+          <li><router-link to="/about">O mnie</router-link></li>
+          <li><router-link to="/about">Projekty</router-link></li>
+          <li><router-link to="/about">Galeria</router-link></li>
+          <li><router-link to="/about">Kontakt</router-link></li>
         </ol>
       </nav>
     </header>
@@ -30,7 +33,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-rows: 100px auto 50px;
+  grid-template-rows: 80px 1fr;
   height: 100vh;
 }
 
@@ -43,7 +46,7 @@ body {
 }
 
 .site-title {
-  flex: 4;
+  flex: 1;
   margin-left: 50px;
 
   & > h1 {
@@ -52,7 +55,7 @@ body {
 }
 
 .nav {
-  flex: 3;
+  flex: 1;
 
   & > ol {
     margin: 0;
@@ -61,7 +64,7 @@ body {
 
     & > li {
       border: 1px solid red;
-      padding: 10px;
+      padding: 10px 20px;
       margin: 0 10px;
     }
   }
@@ -69,10 +72,15 @@ body {
 
 .main {
   grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer {
   grid-row: 3;
+  text-align: center;
+  padding: 10px;
   background-color: maroon;
 }
 
