@@ -28,17 +28,20 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #2c3e50;
+  color: #cecece;
 }
 
 .app {
   display: grid;
   grid-template-rows: 80px 1fr;
   height: 100vh;
+  background: rgba(0, 0, 0, 0.8) url(assets/background.jpg);
+  background-blend-mode: darken;
+
+  background-size: cover;
 }
 
 .header {
-  background-color: cyan;
   grid-row: 1;
 
   display: flex;
@@ -51,6 +54,11 @@ body {
 
   & > h1 {
     margin: 0;
+
+    & > a {
+      color: inherit;
+      text-decoration: none;
+    }
   }
 }
 
@@ -63,9 +71,13 @@ body {
     display: flex;
 
     & > li {
-      border: 1px solid red;
       padding: 10px 20px;
       margin: 0 10px;
+
+      & > a {
+        color: inherit;
+        text-decoration: none;
+      }
     }
   }
 }
@@ -80,8 +92,7 @@ body {
 .footer {
   grid-row: 3;
   text-align: center;
-  padding: 10px;
-  background-color: maroon;
+  padding: 20px;
 }
 
 </style>
