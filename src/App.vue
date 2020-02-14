@@ -4,9 +4,11 @@
       <div class="site-title">
         <h1>komputeryk.pl</h1>
       </div>
-      <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
+      <nav class="nav">
+        <ol>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+        </ol>
       </nav>
     </header>
     <main class="main">
@@ -35,6 +37,34 @@ body {
 .header {
   background-color: cyan;
   grid-row: 1;
+
+  display: flex;
+  padding: 20px;
+}
+
+.site-title {
+  flex: 4;
+  margin-left: 50px;
+
+  & > h1 {
+    margin: 0;
+  }
+}
+
+.nav {
+  flex: 3;
+
+  & > ol {
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+
+    & > li {
+      border: 1px solid red;
+      padding: 10px;
+      margin: 0 10px;
+    }
+  }
 }
 
 .main {
