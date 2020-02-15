@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-      Eryk Andrzejewski 2020
+    Eryk Andrzejewski 2020
   </footer>
 </template>
 

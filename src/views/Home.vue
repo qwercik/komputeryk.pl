@@ -13,8 +13,6 @@
 <style lang="scss" scoped>
 .view {
   display: flex;
-  height: 100%;
-  justify-content: center;
   align-items: center;
 }
 
