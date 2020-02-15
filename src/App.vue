@@ -1,27 +1,24 @@
 <template>
   <div id="app" class="app">
-    <header class="header">
-      <div class="site-title">
-        <h1><router-link to="/">komputeryk.pl</router-link></h1>
-      </div>
-      <nav class="nav">
-        <ol>
-          <li><router-link to="/">Strona główna</router-link></li>
-          <li><router-link to="/about">O mnie</router-link></li>
-          <li><router-link to="/about">Projekty</router-link></li>
-          <li><router-link to="/about">Galeria</router-link></li>
-          <li><router-link to="/about">Kontakt</router-link></li>
-        </ol>
-      </nav>
-    </header>
-    <main class="main">
-      <router-view/>
-    </main>
-    <footer class="footer">
-      Eryk Andrzejewski 2020
-    </footer>
+    <Header />
+    <Main />
+    <Footer />
   </div>
 </template>
+
+<script>
+import Header from '@/components/Header.vue'
+import Main from '@/components/Main.vue'
+import Footer from '@/components/Footer.vue'
+
+export default {
+  components: {
+    Header,
+    Main,
+    Footer
+  }
+}
+</script>
 
 <style lang="scss">
 body {
@@ -39,71 +36,6 @@ body {
   background-blend-mode: darken;
 
   background-size: cover;
-}
-
-.header {
-  grid-row: 1;
-
-  display: flex;
-  padding: 20px;
-}
-
-.site-title {
-  flex: 1;
-  margin-left: 50px;
-
-  & > h1 {
-    margin: 0;
-
-    & > a {
-      color: inherit;
-      text-decoration: none;
-
-      transition-duration: 0.5s;
-
-      &:hover {
-        color: white;
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.nav {
-  flex: 1;
-
-  & > ol {
-    margin: 0;
-    list-style-type: none;
-    display: flex;
-
-    & > li {
-      padding: 10px 20px;
-      margin: 0 10px;
-
-      & > a {
-        color: inherit;
-        text-decoration: none;
-
-        transition-duration: 0.2s;
-
-        &:hover {
-          color: white;
-          text-decoration: underline;
-        }
-      }
-    }
-  }
-}
-
-.main {
-  grid-row: 2;
-}
-
-.footer {
-  grid-row: 3;
-  text-align: center;
-  padding: 20px;
 }
 
 </style>
