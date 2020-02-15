@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <SiteTitle />
+    <div class="space"></div>
     <Navigation />
   </header>
 </template>
@@ -21,6 +22,10 @@ export default {
 .header {
   grid-row: 1;
   display: flex;
-  padding: 20px;
+  padding: 20px 50px;
+}
+
+.space {
+  flex: 1;
 }
 </style>

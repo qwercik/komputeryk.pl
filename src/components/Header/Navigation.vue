@@ -27,9 +27,8 @@ export default {
 
 <style lang="scss" scoped>
 .nav {
-  flex: 1;
-
   & > ol {
+    padding: 0;
     margin: 0;
     list-style-type: none;
     display: flex;
@@ -54,7 +53,6 @@ export default {
 }
 
 .active {
-  /* font-weight: bold; */
   text-shadow: 1px 0 0 white;
   color: white !important;
 }

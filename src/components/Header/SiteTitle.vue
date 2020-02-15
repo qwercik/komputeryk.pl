@@ -8,9 +8,6 @@
 
 <style lang="scss" scoped>
 .site-title {
-  flex: 1;
-  margin-left: 50px;
-
   & > h1 {
     margin: 0;
 
