@@ -1,6 +1,6 @@
 <template>
   <div class="skills">
-    <h1>O tym co potrafię</h1>
+    <h1>O tym, co potrafię</h1>
     <p>
       Nic, absolutnie nic.
     </p>
