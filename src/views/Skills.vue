@@ -1,14 +1,14 @@
 <template>
-  <div class="about">
-    <h1>O mnie słów kilka</h1>
+  <div class="skills">
+    <h1>O tym co potrafię</h1>
     <p>
-      No debil, nieuk i idiota!
+      Nic, absolutnie nic.
     </p>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.about {
+.skills {
   text-align: center;
 }
 </style>

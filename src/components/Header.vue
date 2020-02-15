@@ -5,11 +5,11 @@
       </div>
       <nav class="nav">
         <ol>
-          <li><router-link to="/about">O mnie</router-link></li>
-          <li><router-link to="/about">Projekty</router-link></li>
-          <li><router-link to="/about">Galeria</router-link></li>
-          <li><router-link to="/about">Cośtam</router-link></li>
-          <li><router-link to="/about">Kontakt</router-link></li>
+          <li><router-link to="/o-mnie">O mnie</router-link></li>
+          <li><router-link to="/umiejetnosci">Umiejętności</router-link></li>
+          <li><router-link to="/projekty">Projekty</router-link></li>
+          <li><router-link to="/galeria">Galeria</router-link></li>
+          <li><router-link to="/kontakt">Kontakt</router-link></li>
         </ol>
       </nav>
   </header>
