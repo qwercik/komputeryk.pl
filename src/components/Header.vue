@@ -20,7 +20,7 @@ export default {
   computed: {
     navLinks () {
       return routes
-        .filter(route => route.path !== '/')
+        .filter(route => !('notRenderInNavbar' in route))
         .map(route => ({
           path: route.path,
           title: route.title
@@ -87,6 +87,8 @@ export default {
 }
 
 .active {
-  font-weight: bold;
+  /* font-weight: bold; */
+  text-shadow: 1px 0 0 white;
+  color: white !important;
 }
 </style>
