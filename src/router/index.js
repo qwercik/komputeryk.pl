@@ -7,7 +7,13 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes: routes.map(route => {
+    route.meta = {
+      title: route.title
+    }
+
+    return route
+  })
 })
 
 export default router
