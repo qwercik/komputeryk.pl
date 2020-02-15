@@ -26,6 +26,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/_colors.scss';
+
 .nav {
   & > ol {
     padding: 0;
@@ -44,7 +46,7 @@ export default {
         transition-duration: 0.2s;
 
         &:hover {
-          color: white;
+          color: $highlight;
           text-decoration: underline;
         }
       }
@@ -53,7 +55,7 @@ export default {
 }
 
 .active {
-  text-shadow: 1px 0 0 white;
-  color: white !important;
+  text-shadow: 1px 0 0 $highlight;
+  color: $highlight !important;
 }
 </style>

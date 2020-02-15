@@ -1,7 +1,7 @@
 <template>
   <div class="view">
     <a href="/o-mnie">
-      <img src="@/assets/eryk.jpg" alt="" class="portrait">
+      <img src="@/assets/images/eryk.jpg" alt="" class="portrait">
     </a>
     <div class="about">
       <h2 class="title">Eryk Andrzejewski</h2>

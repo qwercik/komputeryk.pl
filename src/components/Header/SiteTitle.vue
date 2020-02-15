@@ -7,6 +7,8 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/_colors.scss';
+
 .site-title {
   & > h1 {
     margin: 0;
@@ -18,7 +20,7 @@
       transition-duration: 0.5s;
 
       &:hover {
-        color: white;
+        color: $highlight;
         text-decoration: underline;
       }
     }

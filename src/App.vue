@@ -21,21 +21,22 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/_colors.scss';
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  color: #cecece;
+  color: $mainFont;
 }
 
 .app {
   display: grid;
-  grid-template-rows: 80px 1fr;
+  grid-template-rows: auto 1fr;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.8) url(assets/background.jpg);
+  background: $backgroundMask url(assets/images/background.jpg);
   background-blend-mode: darken;
 
   background-size: cover;
 }
-
 </style>
