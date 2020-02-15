@@ -5,15 +5,30 @@
       </div>
       <nav class="nav">
         <ol>
-          <li><router-link to="/o-mnie">O mnie</router-link></li>
-          <li><router-link to="/umiejetnosci">Umiejętności</router-link></li>
-          <li><router-link to="/projekty">Projekty</router-link></li>
-          <li><router-link to="/galeria">Galeria</router-link></li>
-          <li><router-link to="/kontakt">Kontakt</router-link></li>
+          <li v-for="(link, index) in navLinks" :key="index">
+            <router-link :to="link.path" active-class="active">{{ link.title }}</router-link>
+          </li>
         </ol>
       </nav>
   </header>
 </template>
+
+<script>
+import routes from '@/router/routes'
+
+export default {
+  computed: {
+    navLinks () {
+      return routes
+        .filter(route => route.path !== '/')
+        .map(route => ({
+          path: route.path,
+          title: route.title
+        }))
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .header {
@@ -69,5 +84,9 @@
       }
     }
   }
+}
+
+.active {
+  font-weight: bold;
 }
 </style>

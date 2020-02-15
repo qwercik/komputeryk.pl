@@ -6,10 +6,10 @@ import Gallery from '@/views/Gallery.vue'
 import Contact from '@/views/Contact.vue'
 
 export default [
-  { path: '/', name: 'Home', component: Home },
-  { path: '/o-mnie', name: 'About', component: About },
-  { path: '/umiejetnosci', name: 'Skills', component: Skills },
-  { path: '/projekty', name: 'Projects', component: Projects },
-  { path: '/galeria', name: 'Gallery', component: Gallery },
-  { path: '/kontakt', name: 'Contact', component: Contact }
+  { path: '/', name: 'Home', title: 'Strona główna', component: Home },
+  { path: '/o-mnie', name: 'About', title: 'O mnie', component: About },
+  { path: '/umiejetnosci', name: 'Skills', title: 'Umiejętności', component: Skills },
+  { path: '/projekty', name: 'Projects', title: 'Projekty', component: Projects },
+  { path: '/galeria', name: 'Gallery', title: 'Galeria', component: Gallery },
+  { path: '/kontakt', name: 'Contact', title: 'Kontakt', component: Contact }
 ]
