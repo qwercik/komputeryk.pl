@@ -1,6 +1,11 @@
 <template>
   <main class="main">
-    <router-view/>
+    <transition
+      name="change"
+      mode="out-in"
+    >
+      <router-view/>
+    </transition>
   </main>
 </template>
 
@@ -11,4 +16,17 @@
   justify-content: center;
   align-items: center;
 }
+
+.change-enter-active,
+.change-leave-active {
+  transition-duration: 0.4s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.change-enter,
+.change-leave-active {
+  opacity: 0;
+}
+
 </style>
