@@ -26,8 +26,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_colors.scss';
-
 .nav {
   & > ol {
     padding: 0;

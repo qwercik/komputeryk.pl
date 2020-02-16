@@ -7,8 +7,6 @@
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/_colors.scss';
-
 .site-title {
   & > h1 {
     margin: 0;
