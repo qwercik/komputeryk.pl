@@ -3,6 +3,7 @@ module.exports = {
     loaderOptions: {
       scss: {
         prependData: `
+          @import "~sass-mq";
           @import "~@/assets/scss/variables.scss";
         `
       }
