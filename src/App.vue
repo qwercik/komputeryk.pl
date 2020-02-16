@@ -28,6 +28,12 @@ body {
   color: $mainFont;
 }
 
+:focus {
+  outline-color: $highlight;
+  outline-width: 1px;
+  outline-style: solid;
+}
+
 .app {
   position: fixed;
   left: 0;

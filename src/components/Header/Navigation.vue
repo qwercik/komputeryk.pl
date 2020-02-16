@@ -33,6 +33,10 @@ export default {
     list-style-type: none;
     display: flex;
 
+    @include mq($until: tablet) {
+      flex-direction: column;
+    }
+
     & > li {
       padding: 10px 20px;
       margin: 0 10px;

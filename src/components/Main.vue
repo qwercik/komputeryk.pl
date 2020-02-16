@@ -15,6 +15,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 20px;
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px 10px;
+    margin: 0;
+  }
 }
 
 .change-enter-active,

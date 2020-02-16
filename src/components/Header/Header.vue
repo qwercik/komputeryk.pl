@@ -41,4 +41,10 @@ export default {
   }
 }
 
+@include mq($until: tablet) {
+  .header {
+    padding: 20px 5px;
+  }
+}
+
 </style>

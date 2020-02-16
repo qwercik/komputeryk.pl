@@ -14,6 +14,10 @@
 .view {
   display: flex;
   align-items: center;
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+  }
 }
 
 .portrait {
@@ -21,6 +25,10 @@
   width: 200px;
   opacity: 0.8;
   transition-duration: 0.5s;
+
+  @include mq($until: tablet) {
+    width: 180px;
+  }
 
   &:hover {
     opacity: 1;
@@ -30,11 +38,19 @@
 .about {
   padding: 50px;
   text-align: center;
+
+  @include mq($until: tablet) {
+    padding: 30px;
+  }
 }
 
 .title {
   font-size: 2rem;
   margin: 0;
   padding: 0;
+
+  @include mq($until: tablet) {
+    font-size: 1.8rem;
+  }
 }
 </style>
