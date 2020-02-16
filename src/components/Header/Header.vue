@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <SiteTitle />
+    <SiteTitle class="site-title" />
     <div class="space"></div>
     <Navigation />
   </header>
@@ -28,4 +28,17 @@ export default {
 .space {
   flex: 1;
 }
+
+@include mq($until: desktop) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 40px;
+  }
+
+  .site-title {
+    padding: 15px;
+  }
+}
+
 </style>

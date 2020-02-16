@@ -9,6 +9,7 @@
 <style lang="scss" scoped>
 .site-title {
   & > h1 {
+    font-size: 1.7em;
     margin: 0;
 
     & > a {

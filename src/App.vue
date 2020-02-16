@@ -29,6 +29,12 @@ body {
 }
 
 .app {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
