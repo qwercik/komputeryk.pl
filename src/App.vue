@@ -34,7 +34,7 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  overflow: scroll;
+  overflow: auto;
   display: grid;
   grid-template-rows: auto 1fr;
   height: 100vh;
