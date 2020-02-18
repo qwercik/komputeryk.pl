@@ -1,14 +1,17 @@
 <template>
-  <nav :class="{ nav: true, 'hide-on-mobile': !showOnMobile }">
-    <ol>
-      <li v-for="(link, index) in navLinks" :key="index">
-        <router-link :to="link.path" active-class="active">{{ link.title }}</router-link>
-      </li>
-    </ol>
-  </nav>
+  <transition name="slide">
+    <nav v-show="!isMobile || showOnMobile" class="nav">
+      <ol>
+        <li v-for="(link, index) in navLinks" :key="index">
+          <router-link :to="link.path" active-class="active">{{ link.title }}</router-link>
+        </li>
+      </ol>
+</nav>
+  </transition>
 </template>
 
 <script>
+import { vueWindowSizeMixin } from 'vue-window-size'
 import routes from '@/router/routes'
 
 export default {
@@ -26,8 +29,15 @@ export default {
           path: route.path,
           title: route.title
         }))
+    },
+    isMobile () {
+      const maxMobileWidth = 740
+      return this.windowWidth < maxMobileWidth
     }
-  }
+  },
+  mixins: [
+    vueWindowSizeMixin
+  ]
 }
 </script>
 
@@ -69,9 +79,14 @@ export default {
   color: $highlight !important;
 }
 
-.hide-on-mobile {
-  @include mq($until: tablet) {
-    display: none;
-  }
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity .5s;
 }
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+}
+
 </style>
