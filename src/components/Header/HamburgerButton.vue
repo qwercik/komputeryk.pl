@@ -26,8 +26,8 @@ export default {
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   fill: $mainFont;
   transition-duration: 0.4s;
 

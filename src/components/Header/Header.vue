@@ -1,8 +1,9 @@
 <template>
   <header class="header">
-    <SiteTitle class="site-title" />
-    <div class="space"></div>
-    <HamburgerButton />
+    <div class="title-with-hamburger">
+      <SiteTitle class="site-title" />
+      <HamburgerButton />
+    </div>
     <Navigation />
   </header>
 </template>
@@ -25,11 +26,14 @@ export default {
 .header {
   grid-row: 1;
   display: flex;
+  justify-content: space-between;
   padding: 20px 50px;
 }
 
-.space {
-  flex: 1;
+.title-with-hamburger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @include mq($until: desktop) {
@@ -39,14 +43,20 @@ export default {
     padding: 20px 40px;
   }
 
-  .site-title {
+  .title-with-hamburger {
     padding: 25px;
   }
 }
 
 @include mq($until: tablet) {
   .header {
-    padding: 20px 5px;
+    padding: 0;
+  }
+
+  .title-with-hamburger {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
   }
 }
 

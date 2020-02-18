@@ -23,6 +23,10 @@
         text-decoration: underline;
       }
     }
+
+    @include mq($until: tablet) {
+      font-size: 1.5em;
+    }
   }
 }
 </style>
