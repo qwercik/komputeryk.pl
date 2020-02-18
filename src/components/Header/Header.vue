@@ -2,9 +2,9 @@
   <header class="header">
     <div class="title-with-hamburger">
       <SiteTitle class="site-title" />
-      <HamburgerButton />
+      <HamburgerButton @click="state => showMobileMenu = state"/>
     </div>
-    <Navigation />
+    <Navigation :showOnMobile="showMobileMenu" />
   </header>
 </template>
 
@@ -18,6 +18,11 @@ export default {
     SiteTitle,
     Navigation,
     HamburgerButton
+  },
+  data () {
+    return {
+      showMobileMenu: false
+    }
   }
 }
 </script>

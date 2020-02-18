@@ -1,5 +1,5 @@
 <template>
-  <button class="hamburger">
+  <button class="hamburger" @click="changeState">
     <HamburgerIcon class="icon" />
   </button>
 </template>
@@ -9,6 +9,17 @@ import HamburgerIcon from '@/assets/images/hamburger.svg'
 export default {
   components: {
     HamburgerIcon
+  },
+  data () {
+    return {
+      clicked: false
+    }
+  },
+  methods: {
+    changeState () {
+      this.clicked = !this.clicked
+      this.$emit('click', this.clicked)
+    }
   }
 }
 </script>

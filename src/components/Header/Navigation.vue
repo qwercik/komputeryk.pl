@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav">
+  <nav :class="{ nav: true, 'hide-on-mobile': !showOnMobile }">
     <ol>
       <li v-for="(link, index) in navLinks" :key="index">
         <router-link :to="link.path" active-class="active">{{ link.title }}</router-link>
@@ -12,6 +12,12 @@
 import routes from '@/router/routes'
 
 export default {
+  props: {
+    showOnMobile: {
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     navLinks () {
       return routes
@@ -61,5 +67,11 @@ export default {
 .active {
   text-shadow: 1px 0 0 $highlight;
   color: $highlight !important;
+}
+
+.hide-on-mobile {
+  @include mq($until: tablet) {
+    display: none;
+  }
 }
 </style>
