@@ -1,20 +1,26 @@
 <template>
-  <transition name="slide">
-    <nav v-show="!isMobile || showOnMobile" class="nav">
-      <ol>
-        <li v-for="(link, index) in navLinks" :key="index">
-          <router-link :to="link.path" active-class="active">{{ link.title }}</router-link>
-        </li>
-      </ol>
-</nav>
-  </transition>
+  <div>
+    <SmoothReflow>
+      <nav v-if="!isMobile || showOnMobile" class="nav">
+        <ol>
+          <li v-for="(link, index) in navLinks" :key="index">
+            <router-link :to="link.path" active-class="active">{{ link.title }}</router-link>
+          </li>
+        </ol>
+      </nav>
+    </SmoothReflow>
+  </div>
 </template>
 
 <script>
 import { vueWindowSizeMixin } from 'vue-window-size'
+import SmoothReflow from '@/components/SmoothReflow.vue'
 import routes from '@/router/routes'
 
 export default {
+  components: {
+    SmoothReflow
+  },
   props: {
     showOnMobile: {
       type: Boolean,
@@ -77,16 +83,6 @@ export default {
 .active {
   text-shadow: 1px 0 0 $highlight;
   color: $highlight !important;
-}
-
-.slide-enter-active,
-.slide-leave-active {
-  transition: opacity .5s;
-}
-
-.slide-enter,
-.slide-leave-to {
-  opacity: 0;
 }
 
 </style>
