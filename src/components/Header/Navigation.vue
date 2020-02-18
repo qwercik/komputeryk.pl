@@ -31,10 +31,12 @@ export default {
     padding: 0;
     margin: 0;
     list-style-type: none;
+    text-align: center;
     display: flex;
 
     @include mq($until: tablet) {
       flex-direction: column;
+      text-align: center;
     }
 
     & > li {

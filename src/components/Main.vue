@@ -16,12 +16,14 @@
   justify-content: center;
   align-items: center;
   margin: 0 20px;
+}
 
-  @include mq($until: tablet) {
+@include mq($until: tablet) {
+  .main {
     flex-direction: column;
     justify-content: flex-start;
-    padding: 20px 10px;
-    margin: 0;
+    margin: 0 5px;
+    padding: 40px 0;
   }
 }
 

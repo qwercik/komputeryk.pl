@@ -2,6 +2,7 @@
   <header class="header">
     <SiteTitle class="site-title" />
     <div class="space"></div>
+    <HamburgerButton />
     <Navigation />
   </header>
 </template>
@@ -9,11 +10,13 @@
 <script>
 import SiteTitle from '@/components/Header/SiteTitle.vue'
 import Navigation from '@/components/Header/Navigation.vue'
+import HamburgerButton from '@/components/Header/HamburgerButton.vue'
 
 export default {
   components: {
     SiteTitle,
-    Navigation
+    Navigation,
+    HamburgerButton
   }
 }
 </script>
@@ -37,7 +40,7 @@ export default {
   }
 
   .site-title {
-    padding: 15px;
+    padding: 25px;
   }
 }
 
