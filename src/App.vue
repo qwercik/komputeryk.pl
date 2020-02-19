@@ -39,7 +39,7 @@ body {
   overflow: auto;
   display: grid;
   grid-template-rows: auto 1fr;
-  height: 100vh;
+  height: 100rvh;
   background: $backgroundMask url(assets/images/background.jpg);
   background-blend-mode: darken;
 
