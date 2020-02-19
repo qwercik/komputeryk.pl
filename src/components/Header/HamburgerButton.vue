@@ -10,16 +10,13 @@ export default {
   components: {
     HamburgerIcon
   },
-  data () {
-    return {
-      clicked: false
-    }
-  },
   methods: {
     changeState () {
-      this.clicked = !this.clicked
-      this.$emit('click', this.clicked)
+      this.$emit('click', !this.value)
     }
+  },
+  props: {
+    value: Boolean
   }
 }
 </script>

@@ -1,14 +1,15 @@
 <template>
-  <header class="header">
+  <header class="header" v-on-clickaway="hideMobileMenu">
     <div class="title-with-hamburger">
       <SiteTitle class="site-title" />
-      <HamburgerButton @click="state => showMobileMenu = state"/>
+      <HamburgerButton @click="showMobileMenu = $event" :value="showMobileMenu"/>
     </div>
     <Navigation :showOnMobile="showMobileMenu" />
   </header>
 </template>
 
 <script>
+import { mixin as clickaway } from 'vue-clickaway'
 import SiteTitle from '@/components/Header/SiteTitle.vue'
 import Navigation from '@/components/Header/Navigation.vue'
 import HamburgerButton from '@/components/Header/HamburgerButton.vue'
@@ -23,7 +24,15 @@ export default {
     return {
       showMobileMenu: false
     }
-  }
+  },
+  methods: {
+    hideMobileMenu () {
+      this.showMobileMenu = false
+    }
+  },
+  mixins: [
+    clickaway
+  ]
 }
 </script>
 
