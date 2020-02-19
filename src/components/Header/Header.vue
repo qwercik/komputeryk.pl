@@ -32,7 +32,12 @@ export default {
   },
   mixins: [
     clickaway
-  ]
+  ],
+  watch: {
+    '$route' () {
+      this.showMobileMenu = false
+    }
+  }
 }
 </script>
 
