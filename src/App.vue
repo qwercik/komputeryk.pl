@@ -1,18 +1,20 @@
 <template>
-  <div id="app" class="app">
+  <vue100vh id="app" class="app">
     <Header />
     <Main />
     <Footer />
-  </div>
+  </vue100vh>
 </template>
 
 <script>
+import vue100vh from 'vue-100vh'
 import Header from '@/components/Header/Header.vue'
 import Main from '@/components/Main.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
+    vue100vh,
     Header,
     Main,
     Footer
