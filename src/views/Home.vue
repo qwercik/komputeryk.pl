@@ -1,8 +1,8 @@
 <template>
   <div class="view">
-    <a href="/o-mnie">
+    <router-link to="/o-mnie">
       <img src="@/assets/images/eryk.jpg" alt="" class="portrait">
-    </a>
+    </router-link>
     <div class="about">
       <h2 class="title">Eryk Andrzejewski</h2>
       <p>Student informatyki i programista pasjonat</p>
