@@ -2,11 +2,17 @@
   <div class="gallery">
     <h1>Galeria moich fotografii</h1>
     <div class="slider">
-      <button class="slider-button">
+      <button class="slider-button" @click="previousPicture">
         <LeftIcon class="icon" />
       </button>
-      <img src="@/assets/images/background.jpg" class="slider-content">
-      <button class="slider-button">
+
+      <img
+        :src="require(`@/assets/images/gallery/${currentPicture.filename}`)"
+        :alt="currentPicture.name"
+        class="slider-content"
+      >
+
+      <button class="slider-button" @click="nextPicture">
         <RightIcon class="icon" />
       </button>
     </div>
@@ -21,6 +27,33 @@ export default {
   components: {
     LeftIcon,
     RightIcon
+  },
+  computed: {
+    currentPicture () {
+      console.log(this.currentPictureIndex)
+      return this.pictures[this.currentPictureIndex]
+    }
+  },
+  data () {
+    return {
+      pictures: [
+        { name: 'Bieszczady', filename: 'bieszczady.jpg' },
+        { name: 'Droga', filename: 'droga.jpg' },
+        { name: 'Krzyż (2)', filename: 'krzyż-2.jpg' }
+      ],
+      currentPictureIndex: 0
+    }
+  },
+  methods: {
+    nextPicture () {
+      this.currentPictureIndex++
+      this.currentPictureIndex %= this.pictures.length
+    },
+    previousPicture () {
+      this.currentPictureIndex--
+      this.currentPictureIndex += this.pictures.length
+      this.currentPictureIndex %= this.pictures.length
+    }
   }
 }
 </script>
