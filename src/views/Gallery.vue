@@ -7,11 +7,14 @@
       </button>
 
       <div class="slider-content">
-        <img
-          :src="require(`@/assets/images/gallery/${currentPicture.filename}`)"
-          :alt="currentPicture.name"
-          class="slider-content"
-        >
+        <transition name="picture-change" mode="out-in">
+          <img
+            :src="require(`@/assets/images/gallery/${currentPicture.filename}`)"
+            :key="currentPicture.filename"
+            :alt="currentPicture.name"
+            class="slider-content"
+          >
+        </transition>
         <div class="description">
           {{ currentPicture.name }}
         </div>
@@ -122,6 +125,16 @@ export default {
   fill: $mainFont;
   opacity: 0.4;
   transition: opacity 0.5s;
+}
+
+.picture-change-enter-active,
+.picture-change-leave-active {
+  transition: opacity 0.5s;
+}
+
+.picture-change-enter,
+.picture-change-leave-to {
+  opacity: 0;
 }
 
 </style>
