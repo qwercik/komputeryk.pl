@@ -6,11 +6,16 @@
         <LeftIcon class="icon" />
       </button>
 
-      <img
-        :src="require(`@/assets/images/gallery/${currentPicture.filename}`)"
-        :alt="currentPicture.name"
-        class="slider-content"
-      >
+      <div class="slider-content">
+        <img
+          :src="require(`@/assets/images/gallery/${currentPicture.filename}`)"
+          :alt="currentPicture.name"
+          class="slider-content"
+        >
+        <div class="description">
+          {{ currentPicture.name }}
+        </div>
+      </div>
 
       <button class="slider-button" @click="nextPicture">
         <RightIcon class="icon" />
@@ -91,6 +96,24 @@ export default {
 .slider-content {
   max-height: 60vh;
   max-width: 100%;
+  position: relative;
+
+  &:hover .description {
+    opacity: 1;
+  }
+}
+
+.description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+  background: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  padding: 20px;
+  opacity: 0;
 }
 
 .icon {
