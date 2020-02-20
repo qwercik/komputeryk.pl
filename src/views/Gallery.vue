@@ -63,13 +63,10 @@ export default {
   text-align: center;
 }
 
-.description {
-  line-height: 1.5em;
-}
-
 .slider {
   display: flex;
   align-items: stretch;
+  justify-content: center;
 }
 
 .slider-button {
@@ -81,28 +78,27 @@ export default {
   width: 50px;
 
   transition: background 0.5s;
-
   &:hover {
     background: rgba(0, 0, 0, 0.3);
 
     .icon {
       fill: $highlight;
+      opacity: 1;
     }
   }
 }
 
 .slider-content {
-  width: 500px;
-
-  @include mq($until: tablet) {
-    width: 100%;
-  }
+  max-height: 60vh;
+  max-width: 100%;
 }
 
 .icon {
   width: 20px;
   height: auto;
   fill: $mainFont;
+  opacity: 0.4;
+  transition: opacity 0.5s;
 }
 
 </style>
