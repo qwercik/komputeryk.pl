@@ -38,7 +38,6 @@ export default {
   },
   computed: {
     currentPicture () {
-      console.log(this.currentPictureIndex)
       return this.pictures[this.currentPictureIndex]
     }
   },
