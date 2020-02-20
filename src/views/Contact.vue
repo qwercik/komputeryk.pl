@@ -31,9 +31,9 @@
 </template>
 
 <script>
-import EmailIcon from '@/assets/images/email.svg'
-import GithubIcon from '@/assets/images/github.svg'
-import LinkedinIcon from '@/assets/images/linkedin.svg'
+import EmailIcon from '@/assets/icons/email.svg'
+import GithubIcon from '@/assets/icons/github.svg'
+import LinkedinIcon from '@/assets/icons/linkedin.svg'
 
 export default {
   components: {

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import HamburgerIcon from '@/assets/images/hamburger.svg'
+import HamburgerIcon from '@/assets/icons/hamburger.svg'
 export default {
   components: {
     HamburgerIcon
