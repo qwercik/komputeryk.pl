@@ -1,24 +1,30 @@
 <template>
   <div class="contact">
-    <h1>Jak możesz się ze mną skontaktować?</h1>
+    <h1 class="title">Jak możesz się ze mną skontaktować?</h1>
     <ul class="contact-list">
       <li class="contact-entry">
-        <EmailIcon class="icon" />
-        <span class="contact-url">
-          erykandrzejewski@gmail.com
-        </span>
+        <a href="https://github.com/qwercik">
+          <GithubIcon class="icon" />
+          <div class="contact-url">
+            qwercik
+          </div>
+        </a>
       </li>
       <li class="contact-entry">
-        <GithubIcon class="icon" />
-        <span class="contact-url">
-          qwercik
-        </span>
+        <a href="mailto:erykandrzejewski@gmail.com">
+          <EmailIcon class="icon" />
+          <div class="contact-url">
+            erykandrzejewski@gmail.com
+          </div>
+        </a>
       </li>
       <li class="contact-entry">
-        <LinkedinIcon class="icon" />
-        <span class="contact-url">
-          Eryk Andrzejewski
-        </span>
+        <a href="https://www.linkedin.com/in/eryk-andrzejewski-ba5ba218b">
+          <LinkedinIcon class="icon" />
+          <div class="contact-url">
+            Eryk Andrzejewski
+          </div>
+        </a>
       </li>
     </ul>
   </div>
@@ -42,25 +48,48 @@ export default {
 .contact {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 40px;
   text-align: center;
 }
 
 .icon {
   height: 50px;
   width: 50px;
-  padding: 0 20px;
+  padding: 15px;
 }
 
 .contact-list {
   list-style-type: none;
-  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include mq($until: tablet) {
+    flex-direction: column;
+  }
 }
 
 .contact-entry {
-  margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
+  flex: 1;
+
+  & > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
 }
 </style>
