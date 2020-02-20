@@ -52,7 +52,6 @@ export default {
 }
 
 .title {
-  margin-bottom: 40px;
   text-align: center;
 }
 

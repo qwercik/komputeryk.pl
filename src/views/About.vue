@@ -1,8 +1,8 @@
 <template>
   <div class="about">
-    <h1>O mnie słów kilka</h1>
+    <h1>Kilka słów na mój temat</h1>
     <p>
-      No debil, nieuk i idiota!
+      Niedługo coś się tutaj pojawi ;)
     </p>
   </div>
 </template>

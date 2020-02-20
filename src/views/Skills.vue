@@ -2,7 +2,7 @@
   <div class="skills">
     <h1>O tym, co potrafię</h1>
     <p>
-      Nic, absolutnie nic.
+      Już niedługo uzupełnię tę stronę o potrzebne informacje
     </p>
   </div>
 </template>

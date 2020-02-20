@@ -5,7 +5,7 @@
     </a>
     <div class="about">
       <h2 class="title">Eryk Andrzejewski</h2>
-      <p>Debil, idiota, nieuk.</p>
+      <p>Student informatyki i programista pasjonat</p>
     </div>
   </div>
 </template>

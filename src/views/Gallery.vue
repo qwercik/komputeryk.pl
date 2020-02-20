@@ -1,7 +1,7 @@
 <template>
   <div class="gallery">
     <h1>Galeria moich fotografii</h1>
-    <p>
+    <p class="description">
       Jeżeli kiedyś zrobię jakieś ładne zdjęcie, to je tu umieszczę. <br>
       Na razie niczego tutaj nie ma.
     </p>
@@ -11,5 +11,9 @@
 <style lang="scss" scoped>
 .gallery {
   text-align: center;
+}
+
+.description {
+  line-height: 1.5em;
 }
 </style>
