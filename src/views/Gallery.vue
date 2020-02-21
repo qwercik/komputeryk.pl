@@ -51,7 +51,8 @@ export default {
       pictures: [
         { name: 'Bieszczady', filename: 'bieszczady.jpg' },
         { name: 'Droga', filename: 'droga.jpg' },
-        { name: 'Krzyż', filename: 'krzyz-2.jpg' }
+        { name: 'Krzyż', filename: 'krzyz-2.jpg' },
+        { name: 'Słoneczniki', filename: 'sloneczniki.jpg' }
       ],
       currentPictureIndex: 0
     }
