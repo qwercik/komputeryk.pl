@@ -59,6 +59,7 @@ export default {
   height: 50px;
   width: 50px;
   padding: 15px;
+  fill: $mainFont;
 }
 
 .contact-list {
