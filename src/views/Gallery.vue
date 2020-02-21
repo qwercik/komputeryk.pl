@@ -17,7 +17,12 @@
               >
           </transition>
           <div class="description">
-            <h3>{{ currentPicture.name }}</h3>
+            <div class="description-header">
+              <h3 class="picture-title">{{ currentPicture.name }}</h3>
+              <div>
+                {{ currentPicture.place }}, {{ currentPicture.year }}
+              </div>
+            </div>
             <div class="notice">
               Kliknij na zdjęcie, aby zobaczyć je&nbsp;w pełnej rozdzielczości
             </div>
@@ -49,10 +54,10 @@ export default {
   data () {
     return {
       pictures: [
-        { name: 'Bieszczady', filename: 'bieszczady.jpg' },
-        { name: 'Droga', filename: 'droga.jpg' },
-        { name: 'Krzyż', filename: 'krzyz-2.jpg' },
-        { name: 'Słoneczniki', filename: 'sloneczniki.jpg' }
+        { name: 'Bieszczady', filename: 'bieszczady.jpg', year: 2018, place: 'Przełęcz Wyżniańska' },
+        { name: 'Droga', filename: 'droga.jpg', year: 2019, place: 'Podlasie' },
+        { name: 'Krzyż', filename: 'krzyz-2.jpg', year: 2019, place: 'Grabarka' },
+        { name: 'Słoneczniki', filename: 'sloneczniki.jpg', year: 2019, place: 'Podlasie' }
       ],
       currentPictureIndex: 0
     }
@@ -125,12 +130,23 @@ export default {
   transition: opacity 0.5s;
   background: rgba(0, 0, 0, 0.7);
   box-sizing: border-box;
-  padding: 20px;
+  padding: 30px;
   opacity: 0;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.picture-title {
+  padding: 0;
+  margin: 0;
+}
+
+.description-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .icon {
