@@ -1,6 +1,6 @@
 <template>
   <div class="contact">
-    <h1 class="title">Jak możesz się ze mną skontaktować?</h1>
+    <h2 class="title">Jak możesz się ze mną skontaktować?</h2>
     <ul class="contact-list">
       <li class="contact-entry">
         <a href="https://github.com/qwercik">
@@ -53,6 +53,7 @@ export default {
 
 .title {
   text-align: center;
+  font-size: 2em;
 }
 
 .icon {

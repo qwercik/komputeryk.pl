@@ -1,6 +1,6 @@
 <template>
   <div class="gallery">
-    <h1>Galeria moich fotografii</h1>
+    <h2 class="title">Galeria moich fotografii</h2>
     <div class="slider">
       <button class="slider-button" @click="previousPicture">
         <LeftIcon class="icon" />
@@ -79,6 +79,10 @@ export default {
 <style lang="scss" scoped>
 .gallery {
   text-align: center;
+}
+
+.title {
+  font-size: 2em;
 }
 
 .slider {

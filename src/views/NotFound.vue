@@ -1,6 +1,6 @@
 <template>
   <div class="not-found">
-    <h1>Nie znaleziono</h1>
+    <h2 class="title">Nie znaleziono</h2>
     <p>
       Podana strona nie istnieje. Sprawdź dokładnie adres URL.
     </p>
@@ -10,5 +10,9 @@
 <style lang="scss" scoped>
 .not-found {
   text-align: center;
+}
+
+.title {
+  font-size: 2em;
 }
 </style>

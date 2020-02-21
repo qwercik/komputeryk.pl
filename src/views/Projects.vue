@@ -1,6 +1,6 @@
 <template>
   <div class="projects">
-    <h1>Projekty, które zrealizowałem</h1>
+    <h2 class="title">Projekty, które zrealizowałem</h2>
     <p>
       Wkrótce coś się tutaj pojawi!
     </p>
@@ -10,5 +10,9 @@
 <style lang="scss" scoped>
 .projects {
   text-align: center;
+}
+
+.title {
+  font-size: 2em;
 }
 </style>

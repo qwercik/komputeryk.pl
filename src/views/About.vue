@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>Kilka słów na mój temat</h1>
+    <h2 class="title">Kilka słów na mój temat</h2>
     <p>
       Niedługo coś się tutaj pojawi ;)
     </p>
@@ -10,5 +10,9 @@
 <style lang="scss" scoped>
 .about {
   text-align: center;
+}
+
+.title {
+  font-size: 2em;
 }
 </style>
