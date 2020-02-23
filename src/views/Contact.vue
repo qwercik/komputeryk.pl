@@ -61,6 +61,7 @@ export default {
   width: 50px;
   padding: 15px;
   fill: $mainFont;
+  transition: fill 0.5s;
 }
 
 .contact-list {
@@ -88,8 +89,14 @@ export default {
 
     color: inherit;
     text-decoration: none;
+    transition: background 0.5s;
+
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.3);
+
+      & .icon {
+        fill: $highlight;
+      }
     }
   }
 }
