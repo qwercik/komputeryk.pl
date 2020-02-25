@@ -3,7 +3,10 @@
     <h2 class="title">O tym, czym się zajmuję i z czego korzystam</h2>
     <ul class="skills-list">
       <li v-for="(skill, index) in skills" :key="index" class="skill">
-        {{ skill }}
+        <h3 class="skill-title">
+          {{ skill.name }}
+        </h3>
+        <div class="skill-description" v-html="skill.description" />
       </li>
     </ul>
   </div>
@@ -13,7 +16,12 @@
 export default {
   data () {
     return {
-      skills: ['HTML', 'CSS', 'JavaScript', 'Vue', 'React', 'PHP', 'MySQL', 'Symfony', 'Linux', 'Git', 'Docker', 'C', 'C++', 'Rust', 'Python', 'Bash']
+      skills: [
+        { name: 'Frontend', description: 'Tworząc strony internetowe, korzystam z&nbsp;frameworków: <strong>Vue</strong> oraz <strong>React</strong>.<br>Dbam o&nbsp;dostępność tworzonych przeze mnie stron. Zwracam uwagę na detale, aby strona prezentowała się profesjonalnie' },
+        { name: 'Backend', description: 'Do tworzenia backendu stron internetowych, używam języków: <strong>PHP</strong> (<strong>Symfony</strong>) oraz <strong>JavaScript</strong> (<strong>Express</strong>). Stosuję również oprogramowanie <strong>Docker</strong> w&nbsp;celu wirtualizacji serwera na czas tworzenia aplikacji' },
+        { name: 'Low-level', description: 'Interesuję się również programowaniem niskopoziomowym i&nbsp;systemowym. Korzystam z&nbsp;języków: <strong>C</strong> i <strong>C++</strong>, uczę się również języka <strong>Rust</strong>. Znam w&nbsp;podstawowym zakresie język asemblera dla architektury <strong>x86</strong>' },
+        { name: 'Praca codzienna', description: 'Na co dzień posługuję się systemem <strong>Linux</strong> (głównie <strong>Debian</strong> oraz <strong>Mint</strong>), zarówno do użytku osobistego, jak i do podstawowej administracji własnym serwerem. Korzystam z języków <strong>Bash</strong> oraz <strong>Python</strong> do tworzenia skryptów automatyzujących codzienne zadania (czasem też nieco większych aplikacji)' }
+      ]
     }
   }
 }
@@ -28,6 +36,7 @@ export default {
 
 .title {
   font-size: 2em;
+  text-align: center;
 }
 
 .skills-list {
@@ -35,7 +44,6 @@ export default {
   padding: 0;
   list-style-type: none;
   text-align: center;
-  width: 80%;
 
   display: flex;
   flex-wrap: wrap;
@@ -43,13 +51,20 @@ export default {
 
 .skill {
   width: 25%;
-  padding: 40px;
+  padding: 10px 50px;
   box-sizing: border-box;
   transition: background 0.5s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 
   &:hover {
     background: rgba(0, 0, 0, 0.4);
+  }
+
+  @include mq($until: desktop) {
+    width: 50%;
+  }
+
+  @include mq($until: tablet) {
+    width: 100%;
   }
 }
 
