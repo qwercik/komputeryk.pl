@@ -5,7 +5,7 @@
     </router-link>
     <div class="about">
       <h2 class="title">Eryk Andrzejewski</h2>
-      <p>Student informatyki i programista pasjonat</p>
+      <p>Student informatyki i pasjonat programowania</p>
     </div>
   </div>
 </template>
